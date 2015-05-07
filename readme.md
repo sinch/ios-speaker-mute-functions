@@ -3,8 +3,7 @@
 Welcome to another Sinch tutorial, today's tutorial will be a short one and will be focused on some really cool and simple features that Sinch has included in their SDK to make developer's lifes easier.
 
 We will be building an ordinary iOS device to phone app however we will be investigating some of the cool features Sinch has addded to make muting calls and using the iOS device's speaker really easy. Today's app also has a nice UI :-)
-![image1](/images/1.jpg)
-![image2](/images/2.jpg)
+![overview](/images/overview.jpg)
 
 We've prepared a starter file which can be downloaded from [here](https://github.com/sinch/ios-speaker-mute-functions). Download the project, open it and have a look around the app to get an idea of what we will be building. The app comprises of two screens, one that allows us to enter a phone number and another which dispays the current call. To save time we've set up all the actions and outlets for the views.
 
