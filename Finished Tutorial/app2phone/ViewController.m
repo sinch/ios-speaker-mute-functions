@@ -18,10 +18,24 @@
     id<SINClient>_client;
 }
 - (IBAction)callButton:(id)sender {
-    _call = [[_client callClient] callPhoneNumber:_numberLabel.text];
+    
+    if ([_client isStarted]) {
+        _call = [[_client callClient] callPhoneNumber:_numberLabel.text];
     //set delegate - done
     _call.delegate = self;
+    _numberLabel.text = @"";
     [self presentCallScreen:_numberLabel.text];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Client not started" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    [self clearTextBox];
+}
+- (void)clearTextBox {
+    _numberLabel.text = @"";
 }
 - (void)presentCallScreen:(NSString *)phoneNumber {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

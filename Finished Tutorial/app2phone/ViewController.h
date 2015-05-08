@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Sinch/Sinch.h>
 #import "callScreenViewController.h"
-@interface ViewController : UIViewController <SINCallClientDelegate, SINCallDelegate,  callScreenDelegate>
+@interface ViewController : UIViewController <SINCallClientDelegate, SINCallDelegate,  callScreenDelegate, UIAlertViewDelegate>
 //sinclientdelegate added
 
 @end
