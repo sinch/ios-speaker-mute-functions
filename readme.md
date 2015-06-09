@@ -7,7 +7,7 @@ We will be building an ordinary iOS device to phone app however we will be inves
 
 We've prepared a starter file which can be downloaded from [here](https://github.com/sinch/ios-speaker-mute-functions). Download the project, open it and have a look around the app to get an idea of what we will be building. The app comprises of two screens, one that allows us to enter a phone number and another which dispays the current call. To save time we've set up all the actions and outlets for the views.
 
-To get started, log into your Sinch dashboard, create a new app and get your app keys. If you don't have an account follow this [link](www.sinch.com) and it'll show you how to get started, it's FREE! If you verify your mobile phone number now you can get $2 worth of free calls which are pretty important if you want to try out this tutorial.
+To get started, log into your Sinch dashboard, create a new app and get your app keys. If you don't have an account follow this [link](https://www.sinch.com) and it'll show you how to get started, it's FREE! If you verify your mobile phone number now you can get $2 worth of free calls which are pretty important if you want to try out this tutorial.
 
 Once you've got your app keys head over to terminal on your Mac, today we're going to use cocoapods to install the Sinch framework. This is the easiest way although you've also got the option to add the framework manually. Start by using the $ cd command to navigate to your project's main directory and call $ pod init. This will create a file in your project main directory, open up the text file and add the Sinch pod.
 
