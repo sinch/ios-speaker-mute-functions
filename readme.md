@@ -5,6 +5,8 @@ Welcome to another Sinch tutorial, today's tutorial will be a short one and will
 We will be building an ordinary iOS device to phone app however we will be investigating some of the cool features Sinch has addded to make muting calls and using the iOS device's speaker really easy. Today's app also has a nice UI :-)
 ![overview](/images/overview.jpg)
 
+##Getting Started
+
 We've prepared a starter file which can be downloaded from [here](https://github.com/sinch/ios-speaker-mute-functions). Download the project, open it and have a look around the app to get an idea of what we will be building. The app comprises of two screens, one that allows us to enter a phone number and another which dispays the current call. To save time we've set up all the actions and outlets for the views.
 
 To get started, log into your Sinch dashboard, create a new app and get your app keys. If you don't have an account follow this [link](https://www.sinch.com) and it'll show you how to get started, it's FREE! If you verify your mobile phone number now you can get $2 worth of free calls which are pretty important if you want to try out this tutorial.
@@ -14,6 +16,8 @@ Once you've got your app keys head over to terminal on your Mac, today we're goi
 ![Podfile image](/images/podfile.jpg)
 
 Save the podfile and head back over to the terminal and call $ pod install, this could take a little while but you'll notice that there will be a message in the terminal telling you to use the xcworkspace file instead of the traditional xcodeproj file from now on when working on the project.
+
+##Adding Sinch
 	
 Once you've got the frameworks setup it's time to start coding, in the ViewController.h we need to add this line of code below `"#import <UIKit/UIKit.h>"`
 ``` objective-c
@@ -61,6 +65,8 @@ We now need a place to call this method from, it's best to do so from the viewDi
     [self startSinchClient];
 }
 ```
+
+##Calling Functionality and UI
 
 Now that we have established the Sinch client it's time to start calling, we've already got a method called callButton which is linked to the UI. Let's go ahead and put some code in there.
 
@@ -168,6 +174,8 @@ In each of the sound-related methods we get a reference to the audio controller 
 
 In the hangup method we just call hangUp and call dismissViewController on the instance of callScreenViewController that we made earlier.
 
+##Testing
+
 Try out this code, you will notice that none of the buttons in our callScreenViewController work and there's a simple reason for it. We haven't set the our view controller as the delegate for callScreenViewController. Before the call to present the callScreenViewController in the presentCallScreen method set the delegate.
 
 ```objective-c
@@ -240,6 +248,8 @@ Now we need to provide the missing link between the callScreenViewController and
     return image;
 }
 ```
+
+##Finishing Up
 
 In each of the methods we've just called `[self.delegate (delegateMethod)]` and the rest is history. That's all for now, you can contact me on [twitter](http://www.twitter.com/brownzac1) with any questions or just to say hi!
 
