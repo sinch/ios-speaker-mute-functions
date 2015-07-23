@@ -1,8 +1,7 @@
 #Muting calls and using the device's speaker in iOS
 
-Welcome to another Sinch tutorial, today's tutorial will be a short one and will be focused on some really cool and simple features that Sinch has included in their SDK to make developer's lifes easier.
+In this tutorial, we will be building an ordinary iOS app to phone calling app, however we will be investigating some of the cool features Sinch has addded to make muting calls and using the iOS device's speaker really easy. Today's app also has a nice UI.
 
-We will be building an ordinary iOS device to phone app however we will be investigating some of the cool features Sinch has addded to make muting calls and using the iOS device's speaker really easy. Today's app also has a nice UI :-)
 ![overview](/images/overview.jpg)
 
 ##Getting Started
